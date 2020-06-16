@@ -32,27 +32,68 @@
             'answer' => 'In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l\'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l\'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell\'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell\'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all\'esatte parole chiave che hanno determinato il clic su un annuncio.'
         ]
     ];
-
-    
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Faq</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a41fcd4d62.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php 
-        foreach ($faqs as $question ) { ?>
-        <div>
-            <h3> <?php echo $question['question']; ?> </h3>
-            <p> <?php echo $question['answer'] ?> </p>
-            <?php 
-        }
-    ?>
+    <header>
+        <div id="header-top">
+            <div class='img-wrapper'><img src="img/glogo.png" alt=""></div>
+            <h3>Privacy e Termini</h3>
         </div>
+        <div id="header-bottom">
+            <ul class='menu'>
+                <li><a href="">Introduzione</a></li>
+                <li><a href="">Norme sulla privacy</a></li>
+                <li><a href="">Termini di servizio</a></li>
+                <li><a href="">Tecnologie</a></li>
+                <li><a href="">Domande Frequenti</a></li>
+            </ul>
+            <ul>
+                <li class="utente">
+                    <img src="img/unnamed.jpg" alt="">
+                    <a href="">momoramadori@gmail.com</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <?php 
+            foreach ($faqs as $question ) { ?>
+            <div class='question'>
+                <h2> <?php echo $question['question']; ?> </h2>
+                <p> <?php echo $question['answer'] ?> </p>
+            </div>
+            <?php 
+            }
+            ?>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="">Google</a></li>
+                <li><a href="">Tutto su Google</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Termini</a></li>
+            </ul>
+            <div>
+                <i class="fas fa-globe"></i>
+                <select width='40'>
+                    <option value="">Italiano</option>
+                </select>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
