@@ -147,12 +147,17 @@ footer select {
 /* ---- MEDIA ---- */
 
 @media (max-width: 1035px) {
-    ul {
+    #header-bottom  {
         display: none;
     }
+
     header {
         height: 50px;
         display: flex;
         align-items: center;
+    }
+
+    main {
+        padding-top: 100px;
     }
 }
