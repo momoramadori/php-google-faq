@@ -166,3 +166,14 @@ footer select {
         padding-top: 100px;
     }
 }
+
+@media (max-width: 576px) {
+
+    footer select {
+        display: none;
+    }
+
+    footer li {
+        padding-right: 8px;
+    }
+}
